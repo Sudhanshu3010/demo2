@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BookBaazar | Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/5-red-book-png-image-image.png">
+    <script>
+        function clr()
+        {
+            document.getElementById("answer").value="";
+        }
+        function data(val)
+        {
+            document.getElementById("answer").value+=val;
+        }
+        function calculate()
+        {
+            var x=document.getElementById("answer").value;
+            document.getElementById("answer").value=eval(x);
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/Icon-removebg-preview.png" width="220px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-----Calculator----->
+            <div class="account-page">
+                <div class="container">
+                <div class="row">
+                    <div class="col2">
+                        <div class="calculator-container">
+                            <span>Calculator</span>
+                            <hr id="Indicator">
+                            <br>
+                            <div class="input">
+                                <input type="text" size="16" id="answer">
+                                <input type="button" value="1" onclick="data('1')">
+                                <input type="button" value="2" onclick="data('2')">
+                                <input type="button" value="3" onclick="data('3')">
+                                <input type="button" class="operator" value="+" onclick="data('+')">
+                                <br>
+                                <input type="button" value="4" onclick="data('4')">
+                                <input type="button" value="5" onclick="data('5')">
+                                <input type="button" value="6" onclick="data('6')">
+                                <input type="button" class="operator" value="-" onclick="data('-')">
+                                <br>
+                                <input type="button" value="7" onclick="data('7')">
+                                <input type="button" value="8" onclick="data('8')">
+                                <input type="button" value="9" onclick="data('9')"> 
+                                <input type="button" class="operator" value="*" onclick="data('*')">
+                                <br>
+                                <input type="button" id="clear" value=" C " onclick="clr()">
+                                <input type="button" value="0" onclick="data('0')">
+                                <input type="button" value=" = " onclick="calculate()">
+                                <input type="button" class="operator" name="div" value="/" onclick="data('/')">
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <div class="convertor-container">
+                            <span>Convertor</span>
+                            <hr id="Indicator">
+                            <br>
+                            <div class="conv">
+                                <input type="button" class="operator" value="&#8377" onclick="clr1()">
+                                <input type="text" id="display1" placeholder="value">
+                                <br>
+                                <input type="button" class="operator" value="&#36" onclick="calculate1()">
+                                <input type="text" id="display2" placeholder="value" disabled>
+                                <br>
+                                <input type="button" class="operator" value="&#8364" onclick="calculate2()">
+                                <input type="text" id="display3" placeholder="value" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!----footer---->
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3> Download Our App </h3>
+                <p>Download app for Android and iOS mobile phone.</p>
+                <div class="app-logo">
+                    <a href="#"></a>
+                    <img src="images/play-store.png" >
+                    <img src="images/app-store.png">
+               </div>
+            </div>
+                <div class="footer-col-2">
+                    <img src="images/Icon-removebg-preview.png">
+                    <p>BookBaazar offers you millions of titles across all categories</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog post</li>
+                        <li>Return policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2021 - BookBaazar</p>
+    </div>
+</div>
+<script>
+function clr1()
+        {
+            document.getElementById("display").value="";
+        }
+        function data1(val1)
+        {
+            document.getElementById("display").value+=val1;
+        }
+        function calculate1()
+        {
+            var x=document.getElementById("display1").value;
+            document.getElementById("display2").value=x/73.86;
+        }
+        function calculate2()
+        {
+            var x=document.getElementById("display1").value;
+            document.getElementById("display3").value=x/102.74;
+        }
+    </script>
+</body>
+</html>
